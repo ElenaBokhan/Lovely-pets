@@ -1,0 +1,41 @@
+.productItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 320px;
+    height: 350px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.heart::after {
+    content: ' &#10084';
+}
+
+.favourites {
+    position: absolute;
+    right: 0;
+}
+
+.discount {
+    position: absolute;
+    display: inline-flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #f44336;
+    color: #fff;
+}
+
+.pictures {
+    object-fit: contain;
+}
+
+.textContent {
+    padding: 16px 0;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}

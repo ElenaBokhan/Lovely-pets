@@ -1,0 +1,10 @@
+.favourites {
+    display: flex;
+    flex-direction: column;
+}
+
+.favouritesList {
+    display: inherit;
+    flex-direction: inherit;
+    gap: 40px;
+}

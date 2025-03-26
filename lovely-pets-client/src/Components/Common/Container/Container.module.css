@@ -1,0 +1,22 @@
+.container {
+    max-width: 992px;
+    margin: 0 auto;
+
+    /* height: 100%; */
+}
+
+.headerContainer {
+    flex: 0 0 auto;
+    background: #ffe44d;
+}
+
+.mainContainer {
+    flex-grow: 1;
+    position: relative;
+    overflow: scroll;
+}
+
+.footerContainer {
+    flex: 0 0 auto;
+    background: #ffe44d;
+}

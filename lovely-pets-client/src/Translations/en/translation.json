@@ -1,0 +1,71 @@
+{
+    "title": "Welcome {{name}}, to react using react-i18next fully type-safe",
+    "description": {
+        "part1": "This is a simple example.",
+        "part2": "😉"
+    },
+    "button": {
+        "cart": "Add to cart"
+    },
+    "footer": {
+        "in_contact": "We are in contact",
+        "fake_menu": {
+            "payment_and_delivery": "Payment and delivery",
+            "often_asked": "Often asked",
+            "feedback": "Feedback",
+            "contacts": "Contacts"
+        },
+        "menu": {
+            "cart": "Cart",
+            "catalog": "Catalog",
+            "favourites": "Favourites",
+            "user_profile": "User profile"
+        }
+    },
+    "not_found": {
+        "cart": {
+            "title": "There is nothing in Cart yet",
+            "subtitle": "Add products to Cart using"
+        },
+        "favourites": {
+            "title": "There is nothing in Favorites yet",
+            "subtitle": "Add products to Favorites using"
+        },
+        "button": "To main page"
+    },
+    "pages": {
+        "catalog": {
+            "filter": {
+                "search": {
+                    "not_found": "Search not found",
+                    "placeholder": "Search",
+                    "result_text_one": "Search found {{count}} cat",
+                    "result_text_other": "Search found {{count}} cats"
+                },
+                "sort": {
+                    "cheaper": "Cheaper",
+                    "discount": "Discount",
+                    "expensive": "Expensive",
+                    "new": "New",
+                    "popular": "Popular",
+                    "rating": "Rating"
+                }
+            }
+        },
+        "cart": {
+            "title": "Cart"
+        },
+        "favourites": {
+            "title": "Favourites"
+        },
+        "review": {
+            "title": "Review about {{name}}",
+            "rating": "Rating",
+            "comment": {
+                "label": "Comment",
+                "placeholder": "Share your impressions about this pet"
+            },
+            "submit_button": "Sent review"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.cartConteiner {
+    display: flex;
+    gap: 40px;
+}
+
+.cartProducts {
+    width: 65%;
+}
+
+.cartProduct {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.cartProductLink {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+}
+
+.cartMenuContainer {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cartMenu {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 20px;
+    background:  #FFF;
+    box-shadow: 0 2px 16px 0 rgb(96 97 112 / 16%), 0 0 1px 0 rgb(40 41 61 / 2%);
+}
+
+.cartMenuLine{
+    display: flex;
+    justify-content: space-between;
+}
+
+.productImg {
+    width: 100px;
+}
+
+.productName {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cartPrice {
+    width: 15%;
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+.text {
+    color: black;
+}
+
+.red {
+    color: #f44336;
+}
+
+.black {
+    color: #000;
+}
+
+.grey {
+    color: #7b8e98;
+}
+
+.yellow {
+    color: #ffe44d;
+}
+
+.head0 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.head1 {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.head2 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.head3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.extra {
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.paragraph1 {
+    font-size: 16px;
+}
+
+.paragraph2 {
+    font-size: 14px;
+}
+
+.subscribe1 {
+    font-size: 12px;
+}
+
+.subscribe2 {
+    font-size: 9px;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.normal {
+    font-weight: 400;
+}

@@ -1,0 +1,16 @@
+.center {
+    display: flex;
+    margin: auto;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+
