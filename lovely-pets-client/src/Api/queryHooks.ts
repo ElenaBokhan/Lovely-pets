@@ -34,8 +34,11 @@ export const useCreatePetMutation = () => {
 };
 
 export const useDeletePetMutation = () => {
+    const queryClient = useQueryClient();
+
     return useMutation({
         mutationFn: (id: string) => PetsClient.removePet(id),
+        onSuccess: () => queryClient.invalidateQueries({queryKey: ['pets']}),
     });
 };
 

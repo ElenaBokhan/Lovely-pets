@@ -46,7 +46,6 @@ export class PetsClient {
         try {
             await instance.delete(`pets/${id}`);
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }

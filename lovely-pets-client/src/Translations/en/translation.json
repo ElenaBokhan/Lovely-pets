@@ -1,11 +1,17 @@
 {
-    "title": "Welcome {{name}}, to react using react-i18next fully type-safe",
     "description": {
         "part1": "This is a simple example.",
         "part2": "😉"
     },
+    "bread_crumbs": {
+        "to_back": "Back"
+    },
     "button": {
-        "cart": "Add to cart"
+        "add_to_favourites": "Add to favourites",
+        "cart": "Add to cart",
+        "remove_from_favourites": "Remove from favourites",
+        "remove_product": "Remove product",
+        "write_a_review": "Write a review"
     },
     "footer": {
         "in_contact": "We are in contact",
@@ -55,6 +61,10 @@
         "cart": {
             "title": "Cart"
         },
+        "details": {
+            "description": "Description",
+            "reviews": "Reviews"
+        },
         "favourites": {
             "title": "Favourites"
         },
@@ -66,6 +76,18 @@
                 "placeholder": "Share your impressions about this pet"
             },
             "submit_button": "Sent review"
+        }
+    },
+    "placeholder": {
+        "delivery": {
+            "title": "Delivery around the world",
+            "delivery_to_office": "Delivery to office",
+            "delivery_by_courier": "Delivery by courier",
+            "from": "from"
+        },
+        "quality": {
+            "title": "Guarantee of quality",
+            "text": "If you did not like the quality of our products, we will refund the money or do everything possible, to meet your needs."
         }
     }
 }

@@ -18,10 +18,12 @@ import {useState} from 'react';
 import {useLocation, useNavigate, useParams} from 'react-router-dom';
 import {useDeletePetMutation, useGetPet, useTogglePetFavouriteMutation} from 'Api/queryHooks';
 import {isPetFavourite} from 'Utils/utils';
+import {useTranslation} from 'react-i18next';
 
 export const PetCard = () => {
     const {state} = useLocation();
     const {petId} = useParams();
+    const {t} = useTranslation();
     const userId = localStorage.getItem('userId');
 
     const {data} = useGetPet(petId);
@@ -49,7 +51,7 @@ export const PetCard = () => {
     };
 
     const renderAddToFavouriteButton = () => {
-        const labelButton = isFavourite ? 'Удалить из избранного' : 'В избранное';
+        const labelButton = isFavourite ? t('button.remove_from_favourites') : t('button.add_to_favourites');
 
         return (
             <button
@@ -71,7 +73,7 @@ export const PetCard = () => {
                 onClick={handleDeleteProduct}
             >
                 <img alt="deleteIcon" src={trashIcon} />
-                <Text fontColor={EFontColor.GREY} type={ETextType.P2} value={'Удалить товар'} />
+                <Text fontColor={EFontColor.GREY} type={ETextType.P2} value={t('button.remove_product')} />
             </button>
         );
     };
@@ -101,15 +103,15 @@ export const PetCard = () => {
 
     const renderDescription = () => (
         <>
-            <Text type={ETextType.H3} value={'Описание'} />
+            <Text type={ETextType.H3} value={t('pages.details.description')} />
             <Text value={description} />
         </>
     );
 
     const renderReviews = () => (
         <>
-            <Text type={ETextType.H3} value={'Отзывы'} />
-            <LinkButton path="/addReview" label={'Написать отзыв'} state={data} />
+            <Text type={ETextType.H3} value={t('pages.details.reviews')} />
+            <LinkButton path="/addReview" label={t('button.write_a_review')} state={data} />
             {reviews.map((review) => (
                 <Review key={review.createdAt} review={review} />
             ))}

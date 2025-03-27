@@ -4,6 +4,7 @@ import styles from 'Pages/PetCard/PetCard.module.css';
 import {useState} from 'react';
 import {addToCart, cartStore} from 'Store/cartStore';
 import {useStore} from '@tanstack/react-store';
+import {useTranslation} from 'react-i18next';
 
 interface IBasketSelectorProps {
     stock: number;
@@ -11,6 +12,8 @@ interface IBasketSelectorProps {
 }
 
 export const BusketSelector = ({stock, pet}: IBasketSelectorProps) => {
+    const {t} = useTranslation();
+
     const cart = useStore(cartStore, (state) => state);
 
     const [count, setCount] = useState<number>(cart[pet._id]?.count || 0);
@@ -30,7 +33,7 @@ export const BusketSelector = ({stock, pet}: IBasketSelectorProps) => {
     return (
         <div className={styles.busketSelector}>
             <ButtonCounter max={stock} count={count} onDecrease={handleDecrease} onIncrease={handleIncrease} />
-            <Button onChange={handleClick} label={'В корзину'} />
+            <Button onChange={handleClick} label={t('button.cart')} />
         </div>
     );
 };

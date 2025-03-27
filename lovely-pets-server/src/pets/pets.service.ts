@@ -1,14 +1,13 @@
 import {Injectable} from '@nestjs/common';
 import {InjectModel} from '@nestjs/mongoose';
-import {Model, Schema, SortOrder} from 'mongoose';
+import {Model, SortOrder} from 'mongoose';
 import {Pet, PetsDocument} from '../schemas/pets.schemas';
-import {CreatPetDto, ReviewPet} from './dto/create-pet.dto';
+import {CreatPetDto} from './dto/create-pet.dto';
 import {UpdatePetDto} from './dto/update-pet.dto';
 import {FavouriteDto} from './dto/add-to-favourite.dto';
 import {PetsListFilterDto} from './dto/pets-list-filter.dto';
 import {ESortFilter} from '../Enum';
 import {AddReviewPetDto} from './dto/add-review-pet.dto';
-import {FavouritesListDto} from './dto/favourites-list.dto';
 
 @Injectable()
 export class PetsService {
@@ -81,7 +80,7 @@ export class PetsService {
     async addReview(addReviewPetDto: AddReviewPetDto): Promise<Pet | null> {
         const {petId, ...reviewProps} = addReviewPetDto;
 
-        const pet = await this.findOne(addReviewPetDto.petId);
+        const pet = await this.findOne(petId);
 
         if (pet) {
             const updatedRating =
