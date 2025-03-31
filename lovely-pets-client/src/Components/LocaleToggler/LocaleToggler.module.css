@@ -1,0 +1,9 @@
+.locale {
+    outline: none;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(var(--text));
+}

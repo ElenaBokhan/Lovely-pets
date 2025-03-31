@@ -1,0 +1,5 @@
+.logo *{
+    fill: rgb(var(--text));
+    width: 100px;
+    height: 100px;
+}

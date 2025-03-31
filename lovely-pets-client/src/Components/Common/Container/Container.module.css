@@ -1,13 +1,12 @@
 .container {
     max-width: 992px;
     margin: 0 auto;
-
-    /* height: 100%; */
 }
 
 .headerContainer {
     flex: 0 0 auto;
-    background: #ffe44d;
+    background-color: rgb(var(--background-primary));
+    color: rgb(var(--text));
 }
 
 .mainContainer {
@@ -18,5 +17,6 @@
 
 .footerContainer {
     flex: 0 0 auto;
-    background: #ffe44d;
+    background-color: rgb(var(--background-primary));
+    color: rgb(var(--text));
 }

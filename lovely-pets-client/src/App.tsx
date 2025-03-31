@@ -17,6 +17,8 @@ import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {withTranslation} from 'react-i18next';
 import {useEffect} from 'react';
 import {setCartFromStorage, setCartToStorage} from 'Store/cartStore';
+import 'Style/Themes.module.css';
+import Theme from 'Components/Theme/Theme';
 
 export const router: RouteObject[] = [
     {
@@ -88,8 +90,10 @@ const App = () => {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <RouterProvider router={createBrowserRouter(router)} />
-            <ToastContainer autoClose={2000} position="top-right" theme="light" closeOnClick />
+            <Theme>
+                <RouterProvider router={createBrowserRouter(router)} />
+                <ToastContainer autoClose={2000} position="top-right" theme="light" closeOnClick />
+            </Theme>
         </QueryClientProvider>
     );
 };

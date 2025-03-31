@@ -1,0 +1,25 @@
+:root {
+    /* light theme tokens */
+    --background-primary-light: 255, 228, 77;
+    --text-primary-light: 0, 0, 0;
+    --accent-light: 37, 89, 88;
+
+    /* dark theme tokens */
+    --background-primary-dark: 0, 0, 0;
+    --text-primary-dark: 255, 255, 255;
+    --accent-dark: 90, 182, 204;
+}
+
+/* map tokens to proper theme */
+[data-theme='light'] {
+    --background-primary: var(--background-primary-light);
+    --accent: var(--accent-light);
+    --text: var(--text-primary-light);
+}
+
+[data-theme='dark'] {
+    --background-primary: var(--background-primary-dark);
+    --accent: var(--accent-dark);
+    --text: var(--text-primary-dark);
+}
+

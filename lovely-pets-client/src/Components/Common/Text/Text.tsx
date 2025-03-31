@@ -36,15 +36,7 @@ export enum ETextType {
     EXTRA = 'extra',
 }
 
-export const Text = ({
-    children,
-    fontColor = EFontColor.BLACK,
-    type = ETextType.P1,
-    value,
-    weight,
-    className,
-    testId,
-}: ITextProps) => {
+export const Text = ({children, fontColor, type = ETextType.P1, value, weight, className, testId}: ITextProps) => {
     const stylesCN = cn(className, styles[fontColor], styles[weight], styles[type]);
     return (
         <span className={stylesCN} data-testid={testId}>

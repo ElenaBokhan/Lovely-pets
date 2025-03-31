@@ -1,9 +1,8 @@
-import instagramIcon from 'assets/logo-instagram.svg';
-import vkIcon from 'assets/logo-vk.svg';
-import Logo from 'assets/paw.svg';
-import tgIcon from 'assets/telegram 1.svg';
-import viberIcon from 'assets/viber 1.svg';
-import whatsappIcon from 'assets/whatsapp 1.svg';
+import {ReactComponent as InstagramIcon} from 'assets/logo-instagram.svg';
+import {ReactComponent as VkIcon} from 'assets/logo-vk.svg';
+import {ReactComponent as TgIcon} from 'assets/telegram.svg';
+import {ReactComponent as ViberIcon} from 'assets/viber.svg';
+import {ReactComponent as WhatsappIcon} from 'assets/whatsapp.svg';
 import FooterContainer, {EContainerType} from 'Components/Common/Container/Container';
 import {IconButton} from 'Components/Common/IconButton/IconButton';
 import {EFontWeight, ETextType, Text} from 'Components/Common/Text/Text';
@@ -14,6 +13,7 @@ import {Link} from 'react-router-dom';
 import {useState} from 'react';
 import {cartStore} from 'Store/cartStore';
 import {useStore} from '@tanstack/react-store';
+import {Logo} from '../Common/Logo/Logo';
 
 enum EMenuItem {
     CATALOG = 'CATALOG',
@@ -34,12 +34,7 @@ export const Footer = () => {
 
     const renderFooterLogo = () => (
         <div className={styles['logo-block']}>
-            <div className={styles.logo}>
-                <img data-testid={ETestId.HEADER_MAIN_LOGO} height={56} src={Logo} alt="logoMain" />
-                <Text type={ETextType.H1} weight={EFontWeight.GENERAL}>
-                    LovelyPets
-                </Text>
-            </div>
+            <Logo />
             <Text type={ETextType.S2} value={'© «Питомник домашних котиков lovelyPets.ru»'} />
         </div>
     );
@@ -77,6 +72,7 @@ export const Footer = () => {
                                 >
                                     {showBubble && <div className={styles.bubble}>{cartCount}</div>}
                                     <Text
+                                        className={styles.textColor}
                                         type={ETextType.P2}
                                         value={label}
                                         weight={selectedMenuItem === key ? EFontWeight.GENERAL : EFontWeight.SECONDARY}
@@ -91,7 +87,7 @@ export const Footer = () => {
                     {fakeMenu.map((menuItem) => {
                         return (
                             <li key={menuItem}>
-                                <Text type={ETextType.P2} value={menuItem} />
+                                <Text className={styles.textColor} type={ETextType.P2} value={menuItem} />
                             </li>
                         );
                     })}
@@ -106,11 +102,21 @@ export const Footer = () => {
             <Text value={'8 (999) 00-00-00'} />
             <Text type={ETextType.S1} value={'lovelyPets@gmail.com'} />
             <div className={styles.social}>
-                <IconButton alt="telegramLogo" icon={tgIcon} />
-                <IconButton alt="whatsappLogo" icon={whatsappIcon} />
-                <IconButton alt="viberLogo" icon={viberIcon} />
-                <IconButton alt="instagramLogo" icon={instagramIcon} />
-                <IconButton alt="vkLogo" icon={vkIcon} />
+                <IconButton>
+                    <TgIcon className={styles.socialLogo} />
+                </IconButton>
+                <IconButton>
+                    <WhatsappIcon className={styles.socialLogo} />
+                </IconButton>
+                <IconButton>
+                    <ViberIcon className={styles.socialLogo} />
+                </IconButton>
+                <IconButton>
+                    <InstagramIcon className={styles.socialLogo} />
+                </IconButton>
+                <IconButton>
+                    <VkIcon className={styles.socialLogo} />
+                </IconButton>
             </div>
         </div>
     );

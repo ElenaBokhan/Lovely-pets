@@ -1,0 +1,10 @@
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo *{
+    fill: rgb(var(--text));
+}
