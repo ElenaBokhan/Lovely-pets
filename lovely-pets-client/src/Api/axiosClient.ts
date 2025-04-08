@@ -2,7 +2,7 @@ import axios from 'axios';
 import {AuthClient} from './authClient';
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_SERVER_URL || 'http://http://87.228.17.71/api',
+    baseURL: process.env.REACT_APP_SERVER_URL || 'http://87.228.17.71/api',
 });
 
 instance.interceptors.response.use(
