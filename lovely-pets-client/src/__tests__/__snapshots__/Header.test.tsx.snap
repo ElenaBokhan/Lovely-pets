@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Тесты для компонента Header Снапшот компонента Header Snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="headerContainer"
+    data-test-id="header"
+  >
+    <div
+      class="container header"
+    >
+      <div
+        class="logoWrapper"
+      >
+        <div
+          alt="logoMain"
+          class="logo"
+          data-test-id="mainLogo"
+          height="56"
+        />
+        <span
+          class="undefined bold head1"
+        >
+          LovelyPets
+        </span>
+      </div>
+      <div
+        class="searchForm"
+      >
+        <form>
+          <input
+            data-test-id="headerSearchInput"
+            placeholder="Поиск товаров"
+            value=""
+          />
+        </form>
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="searchButton"
+            src="SvgrURL"
+          />
+        </button>
+      </div>
+      <div
+        class="profilesIcons"
+      >
+        <button
+          class="locale"
+          data-test-id="headerLocaleToggle"
+        >
+          EN
+        </button>
+        <div
+          class="logo"
+          data-test-id="headerThemeToggle"
+        />
+        <div
+          class="logo"
+          data-test-id="headerAddNewProduct"
+        />
+        <div
+          class="logo"
+          data-test-id="headerLogOutIcon"
+        />
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

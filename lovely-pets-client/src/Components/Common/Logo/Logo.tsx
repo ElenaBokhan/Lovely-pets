@@ -5,7 +5,7 @@ import {ETestId} from 'Enum';
 
 export const Logo = () => (
     <div className={styles.logoWrapper}>
-        <LogoIcon className={styles.logo} data-testid={ETestId.HEADER_MAIN_LOGO} height={56} alt="logoMain" />
+        <LogoIcon className={styles.logo} data-test-id={ETestId.MAIN_LOGO} height={56} alt="logoMain" />
         <Text type={ETextType.H1} weight={EFontWeight.GENERAL}>
             LovelyPets
         </Text>

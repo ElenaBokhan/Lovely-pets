@@ -1,6 +1,6 @@
 import styles from 'Components/LocaleToggler/LocaleToggler.module.css';
 import {useState} from 'react';
-import {ELocale} from 'Enum';
+import {ELocale, ETestId} from 'Enum';
 import {changeLanguage} from 'i18next';
 
 const getCurrentLocale = (prevLocale: ELocale): ELocale => {
@@ -24,7 +24,7 @@ export const LocaleToggler = () => {
     };
 
     return (
-        <button className={styles.locale} onClick={handleChangeLocale}>
+        <button data-test-id={ETestId.HEADER_LOCALE_TOGGLE} className={styles.locale} onClick={handleChangeLocale}>
             {locale}
         </button>
     );

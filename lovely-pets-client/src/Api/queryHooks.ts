@@ -13,7 +13,6 @@ export const useLoginMutation = () => {
         },
         onError: (error) => {
             toast.error(getMessageFromError(error, error.message));
-            // return Promise.reject(error);
         },
     });
 };
@@ -80,18 +79,6 @@ export const useGetPet = (id: string) => {
         queryFn: () => PetsClient.getPet(id),
         queryKey: ['pet', id],
         staleTime: Infinity,
-    });
-};
-
-export const useAddToFavouriteMutation = () => {
-    return useMutation({
-        mutationFn: (data: IAddToFavourite) => PetsClient.addToFavourite(data),
-    });
-};
-
-export const useRemoveFromFavouriteMutation = () => {
-    return useMutation({
-        mutationFn: (data: IAddToFavourite) => PetsClient.removeFromFavourite(data),
     });
 };
 

@@ -3,13 +3,14 @@ import {IconButton} from 'Components/Common/IconButton/IconButton';
 import styles from 'Components/SearchForm/SearchForm.module.css';
 import {ETestId} from 'Enum';
 import {FormEvent} from 'react';
-import i18next from 'i18next';
 import {useSearchForm} from 'hooks/useSearchForm';
+import {useTranslation} from 'react-i18next';
 
 export const SEARCH_PARAMS_KEY = 'query';
 
 export const SearchForm = () => {
     const [searchValue, setSearchValue] = useSearchForm();
+    const {t} = useTranslation();
 
     const handleSubmit = (event: FormEvent) => {
         setSearchValue(searchValue);
@@ -29,9 +30,9 @@ export const SearchForm = () => {
         <div className={styles.searchForm}>
             <form onSubmit={handleSubmit}>
                 <input
-                    data-testid={ETestId.HEADER_SEARCH_INPUT}
+                    data-test-id={ETestId.HEADER_SEARCH_INPUT}
                     onChange={handleFilterChange}
-                    placeholder={i18next.t('pages.catalog.filter.search.placeholder')}
+                    placeholder={t('pages.catalog.filter.search.placeholder')}
                     value={searchValue}
                 />
             </form>

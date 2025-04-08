@@ -34,7 +34,7 @@ export const Button = ({
     };
     return (
         <button
-            data-testid={testId}
+            data-test-id={testId}
             disabled={disable}
             className={cn(styles.button, styles[theme], className, disable && styles.disable)}
             data-value={label}

@@ -2,6 +2,7 @@ import {useTheme} from 'hooks/useTheme';
 import styles from 'Components/ThemeToggler/ThemeToggler.module.css';
 import {ReactComponent as MoonIcon} from 'assets/moon.svg';
 import {ReactComponent as SunIcon} from 'assets/sun.svg';
+import {ETestId} from '../../Enum';
 
 export const ThemeToggler = () => {
     const {theme, setTheme} = useTheme();
@@ -14,9 +15,11 @@ export const ThemeToggler = () => {
         }
     };
 
-    return theme === 'dark' ? (
-        <SunIcon className={styles.logo} onClick={handleSwitchTheme} />
-    ) : (
-        <MoonIcon className={styles.logo} onClick={handleSwitchTheme} />
-    );
+    const props = {
+        'data-test-id': ETestId.HEADER_THEME_TOGGLE,
+        className: styles.logo,
+        onClick: handleSwitchTheme,
+    };
+
+    return theme === 'dark' ? <SunIcon {...props} /> : <MoonIcon {...props} />;
 };

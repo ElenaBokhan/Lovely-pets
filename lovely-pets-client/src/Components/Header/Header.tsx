@@ -29,9 +29,9 @@ export const Header = () => {
                 <AddNewIcon
                     className={styles.logo}
                     onClick={redirect('/addPet')}
-                    testId={ETestId.HEADER_ADD_NEW_ICON}
+                    data-test-id={ETestId.HEADER_ADD_NEW_ICON}
                 />
-                <LogOut className={styles.logo} onClick={handleLogOut} testId={ETestId.HEADER_LOG_OUT_ICON} />
+                <LogOut className={styles.logo} onClick={handleLogOut} data-test-id={ETestId.HEADER_LOG_OUT_ICON} />
             </div>
         );
     };

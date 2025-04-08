@@ -12,22 +12,6 @@ instance.interceptors.response.use(
         if (error.response.status === 401 && !originalRequest._retry) {
             originalRequest._retry = true; // Mark the request as retried to avoid infinite loops.
             try {
-                // const refreshToken = jwtToken.state.refreshToken;
-                // const userId = user.state.userId;
-
-                // const response = await axios.post(
-                //     'auth/refresh',
-                //     {
-                //         refresh_token: refreshToken,
-                //         id: userId,
-                //     },
-                //     {baseURL: process.env.REACT_APP_SERVER_URL || 'http://localhost:3000'}
-                // );
-                //
-                // const {access_token, refresh_token} = response.data;
-                //
-                // jwtToken.setState(() => ({accessToken: access_token, refreshToken: refresh_token}));
-
                 const access_token = await AuthClient.refresh();
                 instance.defaults.headers.common['Authorization'] = `Bearer ${access_token}`;
 
