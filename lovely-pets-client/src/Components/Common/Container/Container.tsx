@@ -3,6 +3,7 @@ import styles from 'Components/Common/Container/Container.module.css';
 import {Loader} from 'Components/Common/Loader/Loader';
 import React from 'react';
 import {useIsFetching} from '@tanstack/react-query';
+import {ETestId} from '../../../Enum';
 
 interface IContainerProps {
     className?: string;
@@ -23,7 +24,11 @@ const Container: React.FC<IContainerProps> = ({children, type, className}: ICont
     const getContainer = () => {
         switch (type) {
             case EContainerType.HEADER:
-                return <header className={styles[type]}>{getContent()}</header>;
+                return (
+                    <header data-test-id={ETestId.HEADER} className={styles[type]}>
+                        {getContent()}
+                    </header>
+                );
             case EContainerType.MAIN:
                 return (
                     <main className={styles[type]}>
@@ -32,7 +37,11 @@ const Container: React.FC<IContainerProps> = ({children, type, className}: ICont
                     </main>
                 );
             case EContainerType.FOOTER:
-                return <footer className={styles[type]}>{getContent()}</footer>;
+                return (
+                    <footer data-test-id={ETestId.FOOTER} className={styles[type]}>
+                        {getContent()}
+                    </footer>
+                );
         }
     };
 

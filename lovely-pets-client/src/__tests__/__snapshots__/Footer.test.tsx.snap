@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Тесты для компонента Footer Снапшот футера Snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="footerContainer"
+    data-test-id="footer"
+  >
+    <div
+      class="container footer"
+    >
+      <div
+        class="logo-block"
+      >
+        <div
+          class="logoWrapper"
+        >
+          <div
+            alt="logoMain"
+            class="logo"
+            data-test-id="mainLogo"
+            height="56"
+          />
+          <span
+            class="undefined bold head1"
+          >
+            LovelyPets
+          </span>
+        </div>
+        <span
+          class="undefined undefined subscribe2"
+        >
+          © «Питомник домашних котиков lovelyPets.ru»
+        </span>
+      </div>
+      <ul
+        data-test-id="footerMenu"
+      >
+        <li>
+          <a
+            class="link"
+            data-item-id="CATALOG"
+            href="/"
+          >
+            <span
+              class="textColor undefined bold paragraph2"
+            >
+              Каталог
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="link"
+            data-item-id="FAVOURITES"
+            href="/favourites"
+          >
+            <span
+              class="textColor undefined normal paragraph2"
+            >
+              Избранные
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="link"
+            data-item-id="CART"
+            href="/cart"
+          >
+            <span
+              class="textColor undefined normal paragraph2"
+            >
+              Корзина
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            class="link"
+            data-item-id="USER_PROFILE"
+            href="/user_profile"
+          >
+            <span
+              class="textColor undefined normal paragraph2"
+            >
+              Профиль
+            </span>
+          </a>
+        </li>
+      </ul>
+      <ul
+        data-testid="footerMenu"
+      >
+        <li>
+          <span
+            class="textColor undefined undefined paragraph2"
+          >
+            Оплата и доставка
+          </span>
+        </li>
+        <li>
+          <span
+            class="textColor undefined undefined paragraph2"
+          >
+            Часто спрашивают
+          </span>
+        </li>
+        <li>
+          <span
+            class="textColor undefined undefined paragraph2"
+          >
+            Обратная связь
+          </span>
+        </li>
+        <li>
+          <span
+            class="textColor undefined undefined paragraph2"
+          >
+            Контакты
+          </span>
+        </li>
+      </ul>
+      <div
+        class="contacts"
+        data-test-id="footerContacts"
+      >
+        <span
+          class="undefined bold paragraph1"
+        >
+          Мы на связи
+        </span>
+        <span
+          class="undefined undefined paragraph1"
+        >
+          8 (999) 00-00-00
+        </span>
+        <span
+          class="undefined undefined subscribe1"
+        >
+          lovelyPets@gmail.com
+        </span>
+        <div
+          class="social"
+        >
+          <button
+            class="button"
+            type="button"
+          >
+            <div
+              class="socialLogo"
+            />
+          </button>
+          <button
+            class="button"
+            type="button"
+          >
+            <div
+              class="socialLogo"
+            />
+          </button>
+          <button
+            class="button"
+            type="button"
+          >
+            <div
+              class="socialLogo"
+            />
+          </button>
+          <button
+            class="button"
+            type="button"
+          >
+            <div
+              class="socialLogo"
+            />
+          </button>
+          <button
+            class="button"
+            type="button"
+          >
+            <div
+              class="socialLogo"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

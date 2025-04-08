@@ -24,7 +24,7 @@ export const router: RouteObject[] = [
     {
         path: '/',
         element: <Layout />,
-        errorElement: <PageNotFound />, // TODO: добавить errorBoundary, пока заглушка
+        errorElement: <div />, // TODO: добавить errorBoundary, пока заглушка
         children: [
             {
                 path: '/',
@@ -70,7 +70,7 @@ export const router: RouteObject[] = [
     },
 ];
 
-const queryClient = new QueryClient({
+export const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             retry: false,

@@ -18,7 +18,7 @@ export const FieldForm = ({field: {value, label, param, testId}, onChange}: IFie
             <Text value={label} />
             <input
                 className={styles.fieldTextarea}
-                data-testid={testId}
+                data-test-id={testId}
                 onChange={handleChange}
                 placeholder={'Укажите значение'}
                 value={value}

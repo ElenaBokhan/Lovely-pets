@@ -58,7 +58,7 @@ export const Footer = () => {
 
         return (
             <>
-                <ul data-testid={ETestId.FOOTER_MENU}>
+                <ul data-test-id={ETestId.FOOTER_MENU}>
                     {menuConfig.map(({key, label, path}) => {
                         const showBubble = !!cartCount && key === EMenuItem.CART;
 
@@ -97,7 +97,7 @@ export const Footer = () => {
     };
 
     const renderContactsGroup = () => (
-        <div data-testid={ETestId.FOOTER_CONTACTS} className={styles.contacts}>
+        <div data-test-id={ETestId.FOOTER_CONTACTS} className={styles.contacts}>
             <Text value={t('footer.in_contact')} weight={EFontWeight.GENERAL} />
             <Text value={'8 (999) 00-00-00'} />
             <Text type={ETextType.S1} value={'lovelyPets@gmail.com'} />

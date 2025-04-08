@@ -14,7 +14,6 @@ import {useTranslation} from 'react-i18next';
 
 export const AddReview = () => {
     const {state} = useLocation();
-    // const {_id, name: productName} = state;
     const userId = localStorage.getItem('userId');
     const userName = localStorage.getItem('userName');
     const {t} = useTranslation();
@@ -72,7 +71,7 @@ export const AddReview = () => {
                     <input
                         className={styles.reviewTextarea}
                         type="textarea"
-                        data-testid={ETestId.ADD_REVIEW_TEXT_INPUT}
+                        data-test-id={ETestId.ADD_REVIEW_TEXT_INPUT}
                         onChange={handleReviewChange}
                         placeholder={t('pages.review.comment.placeholder')}
                         value={reviewText}

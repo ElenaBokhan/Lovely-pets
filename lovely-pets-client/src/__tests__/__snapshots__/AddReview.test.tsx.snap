@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Тесты для компонента AddReview Снапшот компонента AddReview Snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="addReviewPage"
+  >
+    <div
+      data-testid="titlePage"
+    >
+      <a
+        class="breadcrumbs"
+        data-testid="breadcrumbsButton"
+        href="/"
+      >
+        <img
+          alt="arrow"
+          src="SvgrURL"
+        />
+        <span
+          class="grey undefined subscribe2"
+        >
+          Назад
+        </span>
+      </a>
+      <span
+        class="undefined undefined head1"
+      >
+        Отзыв о товаре productName
+      </span>
+    </div>
+    <div
+      style="height: 40px;"
+    />
+    <hr />
+    <form>
+      <div
+        class="field"
+      >
+        <span
+          class="undefined undefined paragraph1"
+        >
+          Общая оценка
+        </span>
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="ratingProduct"
+            src="SvgrURL"
+          />
+        </button>
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="ratingProduct"
+            src="SvgrURL"
+          />
+        </button>
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="ratingProduct"
+            src="SvgrURL"
+          />
+        </button>
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="ratingProduct"
+            src="SvgrURL"
+          />
+        </button>
+        <button
+          class="button"
+          type="button"
+        >
+          <img
+            alt="ratingProduct"
+            src="SvgrURL"
+          />
+        </button>
+      </div>
+      <div
+        class="field"
+      >
+        <span
+          class="undefined undefined paragraph1"
+        >
+          Комментарий
+        </span>
+        <input
+          class="reviewTextarea"
+          data-test-id="addReviewTextInput"
+          placeholder="Поделитесь впечатлениями о товаре"
+          type="textarea"
+          value=""
+        />
+      </div>
+      <button
+        class="button standard"
+        data-test-id="addReviewSubmitButton"
+        data-value="Отправить отзыв"
+        type="submit"
+      >
+        Отправить отзыв
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

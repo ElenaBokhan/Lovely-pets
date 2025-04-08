@@ -16,17 +16,19 @@ export enum ETestId {
 
     BREADCRUMBS_BUTTON = 'breadcrumbsButton',
 
-    FOOTER_MAIN_LOGO = 'footerMainLogo',
+    FOOTER = 'footer',
     FOOTER_MENU = 'footerMenu',
     FOOTER_CONTACTS = 'footerContacts',
 
-    HEADER_MAIN_LOGO = 'headerMainLogo',
+    HEADER = 'header',
     HEADER_ADD_NEW_ICON = 'headerAddNewProduct',
     HEADER_FAVOURITES_ICON = 'headerFavouritesIcon',
     HEADER_CART_ICON = 'headerCartIcon',
     HEADER_PROFILE_ICON = 'headerProfileIcon',
     HEADER_LOG_OUT_ICON = 'headerLogOutIcon',
+    HEADER_LOCALE_TOGGLE = 'headerLocaleToggle',
     HEADER_SEARCH_INPUT = 'headerSearchInput',
+    HEADER_THEME_TOGGLE = 'headerThemeToggle',
 
     SIGN_FORM_EMAIL_INPUT = 'signFormEmailInput',
     SIGN_FORM_PASSWORD_INPUT = 'signFormPasswordlInput',
@@ -34,6 +36,7 @@ export enum ETestId {
 
     TITLE_PAGE = 'titlePage',
     NOT_FOUND = 'notFound',
+    MAIN_LOGO = 'mainLogo',
 
     PRODUCT_LIKE_BUTTON = 'likeButton',
     PRODUCT_TRASH_BUTTON = 'trashButton',
