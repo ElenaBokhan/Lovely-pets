@@ -23,3 +23,33 @@
     width: 70%;
 }
 
+@media (width <= 576px) {
+    .addReviewPage {
+        padding: 0;
+    }
+
+    .form {
+        padding: 0 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .field{
+        flex-direction: column;
+    }
+
+    .field span {
+        width: 100%
+    }
+
+    .field input {
+        width: 100%;
+    }
+
+    .stars {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+}

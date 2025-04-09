@@ -49,19 +49,23 @@ export const AddReview = () => {
     };
 
     const renderStars = () => {
-        return [...Array(5)].map((_, index) => (
-            <IconButton
-                onClick={() => handleSetRating(index + 1)}
-                key={index}
-                icon={index < currentRating ? starFillIcon : starIcon}
-                alt={'ratingProduct'}
-            />
-        ));
+        return (
+            <div className={styles.stars}>
+                {[...Array(5)].map((_, index) => (
+                    <IconButton
+                        onClick={() => handleSetRating(index + 1)}
+                        key={index}
+                        icon={index < currentRating ? starFillIcon : starIcon}
+                        alt={'ratingProduct'}
+                    />
+                ))}
+            </div>
+        );
     };
 
     const renderAddReviewForm = () => {
         return (
-            <form onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit}>
                 <div className={styles.field}>
                     <Text value={t('pages.review.rating')} />
                     {renderStars()}

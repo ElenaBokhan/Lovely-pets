@@ -3,3 +3,8 @@
     display: flex;
 }
 
+@media (width <= 576px) {
+    .breadcrumbs {
+        padding: 0 20px;
+    }
+}

@@ -24,3 +24,9 @@
     flex-direction: column;
     width: 100%;
 }
+
+@media (width <= 576px) {
+    .modalContainer {
+        width: 320px;
+    }
+}

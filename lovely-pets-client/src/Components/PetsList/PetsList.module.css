@@ -1,6 +1,6 @@
 .productList {
     align-items: center;
-    gap: 1em;
+    gap: 45px;
     flex-wrap: wrap;
     display: flex;
     padding: 40px 0 0;

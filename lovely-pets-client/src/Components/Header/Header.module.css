@@ -24,3 +24,17 @@
 .logo * {
     stroke: rgb(var(--text));
 }
+
+@media (width <= 576px) {
+    .header {
+        padding: 25px;
+        position: relative;
+        height: 170px;
+        align-items: flex-start;
+    }
+
+    .profilesIcons {
+        width: 120px;
+        padding-top: 14px;
+    }
+}

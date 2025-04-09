@@ -57,3 +57,39 @@
     width: 15%;
     text-align: center;
 }
+
+@media (width <= 576px) {
+    .cartConteiner {
+        flex-direction: column;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .cartProducts {
+        width: 100%;
+    }
+
+    .cartProduct {
+        gap: 10px;
+    }
+
+    .cartPrice {
+        width: 20%;
+    }
+
+    .cartPrice > span:first-child {
+       font-size: 16px;
+    }
+
+    .cartSize {
+        padding-left: 20px;
+    }
+
+    .productImg {
+        width: 55px;
+    }
+
+    .cartMenuContainer {
+        width: 100%;
+    }
+}

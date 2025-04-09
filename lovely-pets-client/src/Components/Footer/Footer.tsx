@@ -13,7 +13,7 @@ import {Link} from 'react-router-dom';
 import {useState} from 'react';
 import {cartStore} from 'Store/cartStore';
 import {useStore} from '@tanstack/react-store';
-import {Logo} from '../Common/Logo/Logo';
+import {Logo} from 'Components/Common/Logo/Logo';
 
 enum EMenuItem {
     CATALOG = 'CATALOG',
@@ -33,7 +33,7 @@ export const Footer = () => {
     };
 
     const renderFooterLogo = () => (
-        <div className={styles['logo-block']}>
+        <div className={styles.logo}>
             <Logo />
             <Text type={ETextType.S2} value={'© «Питомник домашних котиков lovelyPets.ru»'} />
         </div>
@@ -83,7 +83,7 @@ export const Footer = () => {
                     })}
                 </ul>
 
-                <ul data-testid={ETestId.FOOTER_MENU}>
+                <ul className={styles.menu} data-testid={ETestId.FOOTER_MENU}>
                     {fakeMenu.map((menuItem) => {
                         return (
                             <li key={menuItem}>

@@ -17,7 +17,7 @@ export const Cart = withProtection(() => {
 
     const cartSizeText = () => {
         const text = (
-            <span>
+            <span className={styles.cartSize}>
                 <b>{cartCount} товара</b> в корзине
             </span>
         );

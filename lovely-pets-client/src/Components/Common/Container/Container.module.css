@@ -20,3 +20,9 @@
     background-color: rgb(var(--background-primary));
     color: rgb(var(--text));
 }
+
+@media (width <= 576px) {
+    .container {
+        gap: 10px;
+    }
+}

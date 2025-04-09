@@ -17,3 +17,11 @@
 .searchForm form {
     flex: 1;
 }
+
+@media (width <= 576px) {
+    .searchForm {
+        position: absolute;
+        bottom: 26px;
+        width: 85%;
+    }
+}

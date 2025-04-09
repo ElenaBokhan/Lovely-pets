@@ -64,3 +64,22 @@
     top: -10px;
     line-height: 18px;
 }
+
+@media (width <= 576px) {
+    .contacts {
+        text-align: right;
+        width: 135px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .footer {
+        padding: 40px 35px;
+    }
+}

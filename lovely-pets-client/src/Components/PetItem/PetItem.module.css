@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 320px;
-    height: 350px;
+    width: 300px;
     position: relative;
     justify-content: space-between;
 }
@@ -37,5 +36,42 @@
     position: relative;
     flex: 1;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.name {
+    display: flex;
     flex-direction: column;
+}
+
+.cartButton {
+    align-self: center;
+}
+
+@media (width <= 576px) {
+    .productItem {
+        width: 100%;
+    }
+
+    .favourites {
+        right: 20px;
+    }
+
+    .discount {
+        left: 20px;
+    }
+
+    .productItem a {
+        width: 100%;
+    }
+
+    .productItem a img {
+        width: 100%;
+    }
+
+    .textContent {
+        padding: 0 20px;
+    }
 }

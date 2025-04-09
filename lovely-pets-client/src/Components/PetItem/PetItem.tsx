@@ -57,10 +57,12 @@ export const PetItem = ({pet}: IPetProps) => {
 
     const renderTextContent = () => (
         <div className={styles.textContent}>
-            <Price price={price} discount={discount} />
+            <div className={styles.name}>
+                <Text testId={ETestId.PRODUCT_NAME} value={name} />
+                <Text fontColor={EFontColor.GREY} type={ETextType.S1} value={`${wight} кг`} />
+            </div>
             <Gap size={6} />
-            <Text fontColor={EFontColor.GREY} type={ETextType.S1} value={`${wight} кг`} />
-            <Text testId={ETestId.PRODUCT_NAME} value={name} />
+            <Price price={price} discount={discount} />
         </div>
     );
 
@@ -73,7 +75,12 @@ export const PetItem = ({pet}: IPetProps) => {
                 <img alt={description} className={styles.pictures} height={'187px'} src={pictures} width={'236px'} />
             </Link>
             {renderTextContent()}
-            <Button onChange={handleAddProductToCart} label={t('button.cart')} theme={EButtonTheme.STANDARD} />
+            <Button
+                className={styles.cartButton}
+                onChange={handleAddProductToCart}
+                label={t('button.cart')}
+                theme={EButtonTheme.STANDARD}
+            />
         </div>
     );
 };
