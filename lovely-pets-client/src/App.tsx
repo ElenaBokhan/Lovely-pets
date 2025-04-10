@@ -35,7 +35,7 @@ export const router: RouteObject[] = [
                 element: <Favourites />,
             },
             {
-                path: '/pets/:petId',
+                path: '/:petId',
                 element: <PetCard />,
             },
             {

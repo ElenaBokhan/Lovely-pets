@@ -71,7 +71,7 @@ export const PetItem = ({pet}: IPetProps) => {
             {!!discount && <div className={styles.discount}>{discount + ' %'}</div>}
             {getIconProductItem()}
 
-            <Link data-testid={ETestId.PRODUCT_IMAGE} state={state} to={`/pets/${_id}`}>
+            <Link data-testid={ETestId.PRODUCT_IMAGE} state={state} to={`/${_id}`}>
                 <img alt={description} className={styles.pictures} height={'187px'} src={pictures} width={'236px'} />
             </Link>
             {renderTextContent()}
