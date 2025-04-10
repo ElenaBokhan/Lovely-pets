@@ -40,7 +40,7 @@ export const AddReview = () => {
                 userId,
                 userName,
             });
-            navigate(`/pets/${updatedPet._id}`);
+            navigate(`/${updatedPet._id}`);
         }
     };
 

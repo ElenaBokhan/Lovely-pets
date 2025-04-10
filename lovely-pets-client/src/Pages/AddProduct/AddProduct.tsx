@@ -93,7 +93,7 @@ export const AddProduct = () => {
             if (isNotEmptyValues()) {
                 const createdPet = await createPet(getNewProduct());
 
-                navigate(`/pets/${createdPet._id}`);
+                navigate(`/${createdPet._id}`);
             }
         } catch (error) {
             console.error(error);

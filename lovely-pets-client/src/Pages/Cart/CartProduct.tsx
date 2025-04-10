@@ -24,7 +24,7 @@ export const CartProduct = ({pet, count}: ICartPet) => {
 
     return (
         <div className={styles.cartProduct}>
-            <Link className={styles.cartProductLink} to={`/pets/${_id}`}>
+            <Link className={styles.cartProductLink} to={`/${_id}`}>
                 <div className={styles.productImg}>
                     <img alt={description} height={'62px'} src={pictures} />
                 </div>
