@@ -7,6 +7,7 @@ import {FieldForm} from 'Components/Common/FieldForm/FieldForm';
 import {useNavigate} from 'react-router-dom';
 import {ETestId} from 'Enum';
 import {useCreatePetMutation} from 'Api/queryHooks';
+import {useTranslation} from 'react-i18next';
 
 export interface IPetField {
     label: string;
@@ -18,47 +19,48 @@ export interface IPetField {
 export const AddProduct = () => {
     const {mutateAsync: createPet} = useCreatePetMutation();
     const navigate = useNavigate();
+    const {t} = useTranslation();
 
     const getInitialProduct = (): IPetField[] => [
         {
             param: 'name',
-            label: 'Название товара',
+            label: t('pages.add_product.fields.name'),
             value: '',
             testId: ETestId.ADD_PRODUCT_NAME_INPUT,
         },
         {
             param: 'price',
-            label: 'Цена товара',
+            label: t('pages.add_product.fields.price'),
             value: '',
             testId: ETestId.ADD_PRODUCT_PRICE_INPUT,
         },
         {
             param: 'description',
-            label: 'Описание',
+            label: t('pages.add_product.fields.description'),
             value: '',
             testId: ETestId.ADD_PRODUCT_DESCRIPTION_INPUT,
         },
         {
             param: 'discount',
-            label: 'Скидка',
+            label: t('pages.add_product.fields.discount'),
             value: '',
             testId: ETestId.ADD_PRODUCT_DISCOUNT_INPUT,
         },
         {
             param: 'stock',
-            label: 'Наличие',
+            label: t('pages.add_product.fields.stock'),
             value: '',
             testId: ETestId.ADD_PRODUCT_STOCK_INPUT,
         },
         {
             param: 'wight',
-            label: 'Вес',
+            label: t('pages.add_product.fields.wight'),
             value: '',
             testId: ETestId.ADD_PRODUCT_WIGHT_INPUT,
         },
         {
             param: 'pictures',
-            label: 'Добавьте фото',
+            label: t('pages.add_product.fields.picture'),
             value: '',
             testId: ETestId.ADD_PRODUCT_PICTURES_INPUT,
         },
@@ -116,14 +118,14 @@ export const AddProduct = () => {
                     <FieldForm key={field.label} onChange={handleSetProduct} field={field} />
                 ))}
 
-                <Button testId={ETestId.ADD_PRODUCT_SUBMIT_BUTTON} type="submit" label={'Добавить котика'} />
+                <Button testId={ETestId.ADD_PRODUCT_SUBMIT_BUTTON} type="submit" label={t('button.add_cat')} />
             </form>
         );
     };
 
     return (
         <div className={styles.addReviewPage}>
-            <TitlePage label={'Добавление нового товара'} />
+            <TitlePage label={t('pages.add_product.title')} />
             <Gap size={40} />
             <hr />
             {renderAddProductForm()}

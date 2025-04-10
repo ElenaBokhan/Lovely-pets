@@ -7,6 +7,7 @@
         "to_back": "Back"
     },
     "button": {
+        "add_cat": "Add cat",
         "add_to_favourites": "Add to favourites",
         "cart": "Add to cart",
         "remove_from_favourites": "Remove from favourites",
@@ -40,6 +41,19 @@
         "button": "To main page"
     },
     "pages": {
+        "add_product": {
+            "title": "Adding new cat",
+            "fields": {
+                "description": "Description",
+                "discount": "Discount",
+                "name": "Name",
+                "picture": "Picture",
+                "price": "Price",
+                "stock": "Stock",
+                "wight": "Wight"
+            },
+            "placeholder": "Enter a value"
+        },
         "catalog": {
             "filter": {
                 "search": {
