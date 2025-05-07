@@ -66,7 +66,7 @@ export const AddProduct = () => {
         },
     ];
 
-    const [pet, setPet] = useState<IPetField[]>(getInitialProduct());
+    const [pet, setPet] = useState<IPetField[]>(() => getInitialProduct());
 
     const isNotEmptyValues = (): boolean => {
         for (const field of pet) {

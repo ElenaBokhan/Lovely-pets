@@ -8,6 +8,7 @@ import {CartMenu} from 'Pages/Cart/CartMenu';
 import {useStore} from '@tanstack/react-store';
 import {cartStore} from 'Store/cartStore';
 import {withProtection} from 'HOCs/withProtection';
+import {Fragment} from 'react';
 
 export const Cart = withProtection(() => {
     const {cart, cartCount} = useStore(cartStore, (state) => ({
@@ -33,10 +34,10 @@ export const Cart = withProtection(() => {
         return (
             <div className={styles.cartProducts}>
                 {Object.values(cart).map(({pet, count}, index) => (
-                    <>
-                        <CartProduct key={pet._id} pet={pet} count={count} />
+                    <Fragment key={pet._id}>
+                        <CartProduct pet={pet} count={count} />
                         {index !== cartCount - 1 && <hr />}
-                    </>
+                    </Fragment>
                 ))}
             </div>
         );

@@ -15,7 +15,7 @@ export const CartProduct = ({pet, count}: ICartPet) => {
     };
 
     const handleDecrease = () => {
-        decrementCount(_id);
+        count !== 1 ? decrementCount(_id) : removeFromCart(_id);
     };
 
     const handleRemoveProductFromCart = () => {

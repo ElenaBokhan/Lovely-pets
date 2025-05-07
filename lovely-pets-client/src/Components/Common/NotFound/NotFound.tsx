@@ -31,7 +31,12 @@ export const NotFound = () => {
     };
 
     const renderTitle = () => {
-        const placement = state.pathname === '/' ? ENotFoundPlacement.CATALOG : ENotFoundPlacement.FAVOURITES;
+        const placement =
+            state.pathname === '/cart'
+                ? ENotFoundPlacement.CART
+                : state.pathname === '/'
+                ? ENotFoundPlacement.CATALOG
+                : ENotFoundPlacement.FAVOURITES;
         const {title, subtitle} = notFoundConfig[placement];
 
         return (
